@@ -19,8 +19,9 @@ public class Monster {
         currentDefence = defence;
         currentLevel = level;
     }
-
-    //Getter methods for Monster object
+    /*
+      Getter methods for Monster object
+    */
     public String getName() {
         return myName;
     }
@@ -47,6 +48,50 @@ public class Monster {
 
     public int getCurrentLevel() {
         return currentLevel;
+    }
+
+    /*
+        Setter methods for Monster Class
+    */
+    public void setMyName(String newName) {
+        myName = newName;
+    }
+
+    public void setMyType(String newType) {
+        myType = newType;
+    }
+
+    public void setMyRace(String newRace) {
+        myRace = newRace;
+    }
+
+    public void setAttack(int newAttack) {
+        currentAttack = newAttack;
+    }
+
+    public void setDefence(int newDefence) {
+        currentDefence = newDefence;
+    }
+
+    public void setLevel(int setLevel) {
+        currentLevel = setLevel;
+    }
+
+    /*
+        Setter methods to update attributes
+    */
+    public void levelUp() {
+        currentLevel++;
+        currentAttack += 3;
+        currentDefence += 5;
+    }
+
+    public void addAttack(int changeAttack) {
+        currentAttack += changeAttack;
+    }
+
+    public void addDefence(int changeDefence) {
+        currentDefence += changeDefence;
     }
 }
 
