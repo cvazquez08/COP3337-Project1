@@ -4,6 +4,7 @@ This Monster Solution contains all of the instance variables and methods for a m
 
 public class Monster {
     //private instance variables
+    private int myId;
     private String myName;
     private String myType;
     private String myRace;
@@ -11,7 +12,8 @@ public class Monster {
     private int currentDefence;
     private int currentLevel;
 
-    public Monster(String name, String type, String race, int attack, int defence, int level) {
+    public Monster(int id, String name, String type, String race, int attack, int defence, int level) {
+        myId = id;
         myName = name;
         myType = type;
         myRace = race;
@@ -22,6 +24,8 @@ public class Monster {
     /*
       Getter methods for Monster object
     */
+    public int getId(){ return myId; }
+
     public String getName() {
         return myName;
     }
@@ -32,10 +36,6 @@ public class Monster {
 
     public String getRace() {
         return myRace;
-    }
-
-    public String getRaceAndType() {
-        return myRace + " " + myType;
     }
 
     public int getAttack() {
@@ -53,6 +53,8 @@ public class Monster {
     /*
         Setter methods for Monster Class
     */
+    public void setMyId(int newId){ myId = newId; }
+
     public void setMyName(String newName) {
         myName = newName;
     }
@@ -86,12 +88,12 @@ public class Monster {
         currentDefence += 5;
     }
 
-    public void addAttack(int changeAttack) {
-        currentAttack += changeAttack;
+    public void addAttack() {
+        currentAttack++;
     }
 
-    public void addDefence(int changeDefence) {
-        currentDefence += changeDefence;
+    public void addDefence() {
+        currentDefence ++;
     }
 }
 
